@@ -1,4 +1,311 @@
-<!DOCTYPE html>
+1rem;
+        }
+        
+        .related-articles {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .related-articles h3 {
+            color: #000080;
+            border-bottom: 2px solid #FF9933;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .article-list {
+            list-style: none;
+        }
+        
+        .article-list li {
+            margin: 10px 0;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .article-list a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .article-list a:hover {
+            color: #FF9933;
+        }
+        
+        .military-image-container, .flag-video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .military-image-container h3, .flag-video-container h3 {
+            color: #000080;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            text-align: center;
+            border-bottom: 2px solid #FF9933;
+            padding-bottom: 8px;
+        }
+        
+        .military-img {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        #flag-video {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .image-caption, .video-caption {
+            text-align: center;
+            font-style: italic;
+            margin-top: 10px;
+            color: #333;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            width: 100%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-section h3 {
+            color: #000080;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-align: center;
+            border-bottom: 2px solid #FF9933;
+            padding-bottom: 10px;
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            border: 3px solid white;
+            border-radius: 5px;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        /* Social Share Buttons */
+        .social-share {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .social-btn {
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .facebook {
+            background-color: #3b5998;
+        }
+        
+        .twitter {
+            background-color: #1da1f2;
+        }
+        
+        .whatsapp {
+            background-color: #25d366;
+        }
+        
+        /* Fireworks Animation */
+        @keyframes firework-animation {
+            0% {
+                width: 5px;
+                height: 5px;
+                opacity: 1;
+            }
+            100% {
+                width: 120px;
+                height: 120px;
+                opacity: 0;
+            }
+        }
+        
+        .firework {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: firework-animation 1.5s ease-out forwards;
+            mix-blend-mode: screen;
+            z-index: 10;
+        }
+        
+        .firework1 {
+            background: radial-gradient(circle, #ff4500, transparent 70%);
+            top: 20%;
+            left: 20%;
+        }
+        
+        .firework2 {
+            background: radial-gradient(circle, #ffd700, transparent 70%);
+            top: 30%;
+            right: 20%;
+            animation-delay: 0.5s;
+        }
+        
+        .firework3 {
+            background: radial-gradient(circle, #7cfc00, transparent 70%);
+            bottom: 40%;
+            left: 30%;
+            animation-delay: 1s;
+        }
+        
+        .firework4 {
+            background: radial-gradient(circle, #ff69b4, transparent 70%);
+            top: 60%;
+            right: 30%;
+            animation-delay: 1.5s;
+        }
+        
+        .firework5 {
+            background: radial-gradient(circle, #1e90ff, transparent 70%);
+            top: 15%;
+            left: 50%;
+            animation-delay: 2s;
+        }
+        
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: linear-gradient(to right, #FF9933, #FFFFFF, #138808);
+            color: #333;
+            font-weight: bold;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-text h3 {
+                font-size: 2.2rem;
+            }
+            
+            .tagline {
+                font-size: 1.8rem;
+            }
+            
+            .hindi-tagline {
+                font-size: 1.5rem;
+            }
+            
+            .jai-hind {
+                font-size: 2.2rem;
+            }
+            
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .hero-video-container {
+                height: 50vh;
+                min-height: 300px;
+            }
+        }
+        
+        /* SEO Structured Data */
+        .structured-data {
+            display: none;
+        }<!DOCTYPE html>
 <html lang="hi-IN">
 <head>
     <meta charset="UTF-8">
@@ -29,21 +336,86 @@
             background-color: #f8f8f8;
             overflow-x: hidden;
             text-align: center;
+            color: #333;
         }
         
         .container {
             width: 100%;
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 20px;
+            padding: 0;
             position: relative;
         }
         
+        /* Hero Video Section */
+        .hero-video-container {
+            width: 100%;
+            height: 60vh;
+            min-height: 400px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        #hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-text {
+            z-index: 3;
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            animation: glow 2s infinite alternate;
+        }
+        
+        .hero-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .hero-text h3 {
+            font-size: 3rem;
+            font-weight: bold;
+            animation: bounce 2s infinite;
+        }
+        
+        .content-section {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
         .flag-container {
-            width: 80%;
+            width: 100%;
             max-width: 500px;
             margin: 30px auto;
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -84,10 +456,19 @@
             animation: colorChange 4s infinite alternate;
         }
         
-        @keyframes colorChange {
-            0% { color: #FF9933; }
-            50% { color: #000080; }
-            100% { color: #138808; }
+        .bharat-mata {
+            font-size: 2.3rem;
+            margin-top: 15px;
+            color: #FF9933;
+            text-shadow: 0 0 10px rgba(255,255,255,0.7);
+            animation: colorPulse 4s infinite alternate;
+        }
+        
+        @keyframes colorPulse {
+            0% { color: #FF9933; text-shadow: 0 0 10px rgba(255,255,255,0.7); }
+            33% { color: #FFFFFF; text-shadow: 0 0 15px rgba(255,153,51,0.9); }
+            66% { color: #138808; text-shadow: 0 0 15px rgba(255,255,255,0.7); }
+            100% { color: #FF9933; text-shadow: 0 0 10px rgba(255,255,255,0.7); }
         }
         
         .jai-hind {
@@ -108,8 +489,8 @@
         .news-section {
             max-width: 800px;
             margin: 40px auto;
-            padding: 20px;
-            background-color: rgba(255,255,255,0.8);
+            padding: 25px;
+            background-color: rgba(255,255,255,0.9);
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
@@ -117,14 +498,505 @@
         .news-section h2 {
             color: #000080;
             margin-bottom: 15px;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #FF9933;
+            padding-bottom: 10px;
         }
         
         .news-section p {
             text-align: left;
             line-height: 1.6;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-size: 1.1rem;
+        }
+        
+        .news-section a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #FF9933;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .news-section a:hover {
+            background-color: #000080;
+            transform: translateY(-3px);
+        }
+        
+        .military-image-container, .flag-video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .military-image-container h3, .flag-video-container h3 {
+            color: #000080;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            text-align: center;
+            border-bottom: 2px solid #FF9933;
+            padding-bottom: 8px;
+        }
+        
+        .military-img {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        #flag-video {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .image-caption, .video-caption {
+            text-align: center;
+            font-style: italic;
+            margin-top: 10px;
+            color: #333;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            width: 100%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-section h3 {
+            color: #000080;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-align: center;
+            border-bottom: 2px solid #FF9933;
+            padding-bottom: 10px;
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            border: 3px solid white;
+            border-radius: 5px;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        /* Social Share Buttons */
+        .social-share {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .social-btn {
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .facebook {
+            background-color: #3b5998;
+        }
+        
+        .twitter {
+            background-color: #1da1f2;
+        }
+        
+        .whatsapp {
+            background-color: #25d366;
+        }
+        
+        /* Fireworks Animation */
+        @keyframes firework-animation {
+            0% {
+                width: 5px;
+                height: 5px;
+                opacity: 1;
+            }
+            100% {
+                width: 120px;
+                height: 120px;
+                opacity: 0;
+            }
+        }
+        
+        .firework {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: firework-animation 1.5s ease-out forwards;
+            mix-blend-mode: screen;
+            z-index: 10;
+        }
+        
+        .firework1 {
+            background: radial-gradient(circle, #ff4500, transparent 70%);
+            top: 20%;
+            left: 20%;
+        }
+        
+        .firework2 {
+            background: radial-gradient(circle, #ffd700, transparent 70%);
+            top: 30%;
+            right: 20%;
+            animation-delay: 0.5s;
+        }
+        
+        .firework3 {
+            background: radial-gradient(circle, #7cfc00, transparent 70%);
+            bottom: 40%;
+            left: 30%;
+            animation-delay: 1s;
+        }
+        
+        .firework4 {
+            background: radial-gradient(circle, #ff69b4, transparent 70%);
+            top: 60%;
+            right: 30%;
+            animation-delay: 1.5s;
+        }
+        
+        .firework5 {
+            background: radial-gradient(circle, #1e90ff, transparent 70%);
+            top: 15%;
+            left: 50%;
+            animation-delay: 2s;
+        }
+        
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: linear-gradient(to right, #FF9933, #FFFFFF, #138808);
+            color: #333;
+            font-weight: bold;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-text h3 {
+                font-size: 2.2rem;
+            }
+            
+            .tagline {
+                font-size: 1.8rem;
+            }
+            
+            .hindi-tagline {
+                font-size: 1.5rem;
+            }
+            
+            .jai-hind {
+                font-size: 2.2rem;
+            }
+            
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .hero-video-container {
+                height: 50vh;
+                min-height: 300px;
+            }
+        }
+        
+        /* SEO Structured Data */
+        .structured-data {
+            display: none;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "Operation Sindoor: India's Precision Airstrikes on Terror Hubs",
+      "image": "flag.jpg",
+      "datePublished": "2025-05-07T08:00:00+05:30",
+      "dateModified": "2025-05-07T08:00:00+05:30",
+      "author": {
+        "@type": "Organization",
+        "name": "Indian Patriots"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Indian Patriots",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "flag.jpg"
+        }
+      },
+      "description": "India carried out a series of precision airstrikes on nine identified terror hubs across Pakistan and Pakistan-Occupied Kashmir (PoK) in retaliation for the April 22 Pahalgam attack."
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Video Section -->
+        <div class="hero-video-container">
+            <video id="hero-video" autoplay loop muted playsinline poster="flag.jpg">
+                <source src="indian-flag-video.mp4" type="video/mp4">
+                <!-- Fallback to an image if video doesn't load -->
+                <img src="flag.jpg" alt="Indian Flag" style="width:100%; height:100%; object-fit:cover;">
+            </video>
+            <div class="video-overlay">
+                <div class="hero-text">
+                    <h1>HINDUSTAN ZINDABAD</h1>
+                    <h2>हिंदुस्तान ज़िंदाबाद था ज़िंदाबाद है ज़िंदाबाद रहेगा</h2>
+                    <h3>JAI HIND</h3>
+                    <h2 class="bharat-mata">भारत माता की जय</h2>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated Fireworks -->
+        <div class="firework firework1"></div>
+        <div class="firework firework2"></div>
+        <div class="firework firework3"></div>
+        <div class="firework firework4"></div>
+        <div class="firework firework5"></div>
+        
+        <div class="content-section">
+            <!-- Military Image Section -->
+            <div class="military-image-container">
+                <h3>India's Brave Defenders</h3>
+                <img src="military-image.jpg" alt="Indian Military Operation" class="military-img">
+                <p class="image-caption">Indian Special Forces during Operation Sindoor</p>
+            </div>
+            
+            <div class="news-section">
+                <h2>Operation Sindoor: India's Strategic Response</h2>
+                <p>India carried out a series of precision airstrikes on nine identified terror hubs across Pakistan and Pakistan-Occupied Kashmir (PoK) in retaliation for the April 22 Pahalgam attack, which killed 25 Indian civilians and one Nepali citizen.</p>
+                <p>The strikes, conducted under the codename Operation Sindoor, were aimed at disrupting terrorist infrastructure used to plan and direct cross-border operations.</p>
+                <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2127370" target="_blank">Read Official Press Release</a>
+                
+                <!-- Social sharing buttons -->
+                <div class="social-share">
+                    <a href="#" class="social-btn facebook">Share on Facebook</a>
+                    <a href="#" class="social-btn twitter">Share on Twitter</a>
+                    <a href="#" class="social-btn whatsapp">Share on WhatsApp</a>
+                </div>
+            </div>
+            
+            <!-- Gallery Section -->
+            <div class="gallery-section">
+                <h3>Operation Gallery</h3>
+                <div class="gallery-container" id="image-gallery">
+                    <!-- Gallery will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 Hindustan Zindabad. All rights reserved.</p>
+        </footer>
+        
+        <!-- Lightbox for Gallery -->
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="Enlarged Image">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create additional random fireworks
+        function createFirework() {
+            const firework = document.createElement('div');
+            firework.className = 'firework';
+            
+            // Random position
+            const posX = Math.random() * 100;
+            const posY = Math.random() * 100;
+            
+            // Random color
+            const colors = ['#ff4500', '#ffd700', '#7cfc00', '#ff69b4', '#1e90ff', '#ff8c00', '#9400d3'];
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            
+            firework.style.background = `radial-gradient(circle, ${color}, transparent 70%)`;
+            firework.style.top = `${posY}%`;
+            firework.style.left = `${posX}%`;
+            firework.style.animationDelay = `${Math.random() * 3}s`;
+            
+            document.querySelector('.container').appendChild(firework);
+            
+            // Remove the firework after animation completes
+            setTimeout(() => {
+                firework.remove();
+            }, 3000);
+        }
+        
+        // Create new fireworks periodically
+        setInterval(createFirework, 500);
+        
+        // Initial fireworks
+        for (let i = 0; i < 10; i++) {
+            setTimeout(createFirework, i * 300);
+        }
+        
+        // Handle the image gallery
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load images from /images folder
+            const gallery = document.getElementById('image-gallery');
+            
+            // Function to load images from a folder - in a real implementation,
+            // you would need server-side code or a specific file structure
+            function loadGalleryImages() {
+                // This is a placeholder - normally you would fetch this data from a server
+                // For now, we'll add placeholders that will be replaced by real images
+                const imagePaths = [
+                    'images/operation1.jpg',
+                    'images/operation2.jpg',
+                    'images/operation3.jpg',
+                    'images/operation4.jpg',
+                    'images/operation5.jpg',
+                    'images/operation6.jpg'
+                ];
+                
+                imagePaths.forEach((path, index) => {
+                    const item = document.createElement('div');
+                    item.className = 'gallery-item';
+                    
+                    const img = document.createElement('img');
+                    img.src = path;
+                    img.alt = `Operation Sindoor Image ${index + 1}`;
+                    img.onerror = function() {
+                        this.src = `data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="250" height="200" viewBox="0 0 250 200"%3E%3Crect width="250" height="200" fill="%23f0f0f0"/%3E%3Ctext x="50%25" y="50%25" font-family="Arial" font-size="14" text-anchor="middle" dominant-baseline="middle"%3EImage ${index + 1}%3C/text%3E%3C/svg%3E`;
+                    };
+                    
+                    item.appendChild(img);
+                    gallery.appendChild(item);
+                    
+                    // Add click event for lightbox
+                    item.addEventListener('click', function() {
+                        const lightbox = document.getElementById('lightbox');
+                        const lightboxImg = document.getElementById('lightbox-img');
+                        lightboxImg.src = img.src;
+                        lightbox.style.display = 'flex';
+                    });
+                });
+            }
+            
+            loadGalleryImages();
+            
+            // Lightbox close button
+            document.querySelector('.lightbox-close').addEventListener('click', function() {
+                document.getElementById('lightbox').style.display = 'none';
+            });
+            
+            // Handle the military image
+            const militaryImg = document.querySelector('.military-img');
+            militaryImg.onerror = function() {
+                this.src = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="700" height="400" viewBox="0 0 700 400"%3E%3Crect width="700" height="400" fill="%23f0f0f0"/%3E%3Ctext x="50%25" y="50%25" font-family="Arial" font-size="18" text-anchor="middle"%3EAdd military-image.jpg to this directory%3C/text%3E%3C/svg%3E';
+            };
+            
+            // Handle video loading
+            const heroVideo = document.getElementById('hero-video');
+            heroVideo.onerror = function() {
+                const image = document.createElement('img');
+                image.src = 'flag.jpg';
+                image.alt = 'Indian Flag';
+                image.style.width = '100%';
+                image.style.height = '100%';
+                image.style.objectFit = 'cover';
+                
+                heroVideo.parentNode.replaceChild(image, heroVideo);
+            };
+        });
+    </script>
+</body>
+</html>1rem;
         }
         
         /* Ad Spaces */
