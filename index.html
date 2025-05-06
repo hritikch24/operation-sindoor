@@ -649,4 +649,212 @@
             </script>
         </div>
         
-  
+        <!-- Main Content Section -->
+        <div class="content-section">
+            <!-- Military Image Section -->
+            <div class="military-image-container">
+                <h3>India's Brave Defenders</h3>
+                <img src="military-image.jpg" alt="Indian Military Operation" class="military-img">
+                <p class="image-caption">Indian Special Forces during Operation Sindoor</p>
+            </div>
+            
+            <div class="news-section">
+                <h2>Operation Sindoor: India's Strategic Response to Pahalgam Terror Attack</h2>
+                <p>India carried out a series of precision airstrikes on nine identified terror hubs across Pakistan and Pakistan-Occupied Kashmir (PoK) in retaliation for the April 22 Pahalgam attack, which killed 25 Indian civilians and one Nepali citizen. This marked the first time since the 2019 Balakot strikes that Indian warplanes crossed the Line of Control (LoC).</p>
+                <p>The strikes, conducted under the codename Operation Sindoor, were carried out by elite IAF Mirage 2000 fighter jets armed with Israeli-made SPICE 2000 precision-guided munitions. The operation was supported by Sukhoi Su-30MKI aircraft that provided air cover during the mission. These fighter jets, known as "Vajra" (thunderbolt), have a proven track record from the 1999 Kargil War and the 2019 Balakot airstrikes.</p>
+                <p>Prime Minister Modi had earlier vowed to pursue the attackers "to the ends of the earth" following the Pahalgam massacre. The Indian military was given "complete operational freedom" to respond to the attack, resulting in today's decisive action against terrorist infrastructure used to plan and direct cross-border operations.</p>
+                <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2127370" target="_blank">Read Official Press Release</a>
+                
+                <!-- Social sharing buttons -->
+                <div class="social-share">
+                    <a href="javascript:void(0);" onclick="shareOnFacebook()" class="social-btn facebook">Share on Facebook</a>
+                    <a href="javascript:void(0);" onclick="shareOnTwitter()" class="social-btn twitter">Share on Twitter</a>
+                    <a href="javascript:void(0);" onclick="shareOnWhatsApp()" class="social-btn whatsapp">Share on WhatsApp</a>
+                </div>
+                
+                <!-- Hidden tags for SEO -->
+                <div class="hidden-tags">
+                    <span>#OperationSindoor</span>
+                    <span>#IndiaStrikes</span>
+                    <span>#PahalgamAttack</span>
+                    <span>#JaiHind</span>
+                    <span>#indianairforce</span>
+                    <span>#Mirage2000</span>
+                    <span>#bharat</span>
+                    <span>#IndiaVsPak</span>
+                </div>
+            </div>
+            
+            <!-- AdSense Ad Unit (Middle) -->
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2122039846521532"
+                     data-ad-slot="2345678901"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
+            <!-- Gallery Section -->
+            <div class="gallery-section">
+                <h3>Operation Gallery: India vs Pakistan</h3>
+                <div class="gallery-container" id="image-gallery">
+                    <!-- Gallery will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- AdSense Ad Unit (Bottom) -->
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2122039846521532"
+                     data-ad-slot="3456789012"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 Hindustan Zindabad. All rights reserved.</p>
+        </footer>
+        
+        <!-- Lightbox for Gallery -->
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="Enlarged Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Create fireworks animation
+        function createFirework() {
+            const firework = document.createElement('div');
+            firework.className = 'firework';
+            
+            // Random position
+            const posX = Math.random() * 100;
+            const posY = Math.random() * 100;
+            
+            // Random color
+            const colors = ['#ff4500', '#ffd700', '#7cfc00', '#ff69b4', '#1e90ff', '#ff8c00', '#9400d3'];
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            
+            firework.style.background = `radial-gradient(circle, ${color}, transparent 70%)`;
+            firework.style.top = `${posY}%`;
+            firework.style.left = `${posX}%`;
+            firework.style.animationDelay = `${Math.random() * 3}s`;
+            
+            document.querySelector('.container').appendChild(firework);
+            
+            // Remove the firework after animation completes
+            setTimeout(() => {
+                firework.remove();
+            }, 3000);
+        }
+        
+        // Load gallery images from the images folder
+        function loadGalleryImages() {
+            const gallery = document.getElementById('image-gallery');
+            
+            // List of image paths - these should be files in your images folder
+            const imagePaths = [
+                'images/operation_1.jpg',
+                'images/operation_2.jpg',
+                'images/operation_3.jpg',
+                'images/operation_4.jpg',
+                'images/operation_5.jpg',
+                'images/operation_6.jpg'
+            ];
+            
+            // Image alt descriptions with keywords for SEO
+            const imageAlts = [
+                'Indian Army Special Forces during Phalgam Attack Response',
+                'Operation Sindoor Airstrikes Against Terror Camps',
+                'India vs Pakistan Border Security Forces',
+                'Indian Military Response to Terror Attack',
+                'Phalgam Terror Attack Aftermath',
+                'Hindustan Zindabad Celebrations After Successful Operation'
+            ];
+            
+            // Create gallery items for each image
+            imagePaths.forEach((path, index) => {
+                const item = document.createElement('div');
+                item.className = 'gallery-item';
+                
+                const img = document.createElement('img');
+                img.src = path;
+                img.alt = imageAlts[index] || `Operation Sindoor Image ${index + 1}`;
+                
+                // Handle image loading errors
+                img.onerror = function() {
+                    this.src = `data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="250" height="200" viewBox="0 0 250 200"%3E%3Crect width="250" height="200" fill="%23f0f0f0"/%3E%3Ctext x="50%25" y="50%25" font-family="Arial" font-size="14" text-anchor="middle" dominant-baseline="middle"%3EImage ${index + 1}%3C/text%3E%3C/svg%3E`;
+                    console.log(`Failed to load image: ${path}. Make sure your images are in the 'images' folder.`);
+                };
+                
+                item.appendChild(img);
+                gallery.appendChild(item);
+                
+                // Set up lightbox functionality
+                item.addEventListener('click', function() {
+                    const lightbox = document.getElementById('lightbox');
+                    const lightboxImg = document.getElementById('lightbox-img');
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightbox.style.display = 'flex';
+                });
+            });
+        }
+        
+        // Social sharing functions
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent('Operation Sindoor: India\'s Precision Airstrikes on Pakistan Terror Hubs | Hindustan Zindabad | Jai Hind');
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${title}`, '_blank');
+        }
+        
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Operation Sindoor: India\'s Precision Airstrikes across LoC on Terror Hubs. भारत माता की जय! #IndiaVsPak #JaiHind #OperationSindoor #PahalgamAttack');
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+        
+        function shareOnWhatsApp() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Operation Sindoor: India\'s Precision Airstrikes on Pakistan Terror Hubs. Hindustan Zindabad! 🇮🇳 Read more about India\'s response to Pahalgam attack:');
+            window.open(`https://api.whatsapp.com/send?text=${text}%20${url}`, '_blank');
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Start fireworks
+            setInterval(createFirework, 500);
+            for (let i = 0; i < 5; i++) {
+                setTimeout(createFirework, i * 300);
+            }
+            
+            // Load gallery images
+            loadGalleryImages();
+            
+            // Set up lightbox close functionality
+            document.querySelector('.lightbox-close').addEventListener('click', function() {
+                document.getElementById('lightbox').style.display = 'none';
+            });
+            
+            // Handle video loading errors
+            const heroVideo = document.getElementById('hero-video');
+            heroVideo.onerror = function() {
+                console.log('Failed to load video. Using image fallback instead.');
+                const overlay = document.querySelector('.video-overlay');
+                overlay.style.background = 'rgba(0, 0, 0, 0.6)';
+            };
+        });
+    </script>
+</body>
+</html>
