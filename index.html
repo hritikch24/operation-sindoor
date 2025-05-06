@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Operation Sindoor: India's precision airstrikes on terror hubs after Pahalgam attack. India strikes Pakistan terror camps in retaliation for Kashmir terror attack. Updates on India-Pakistan tension and border conflict.">
-    <meta name="keywords" content="Operation Sindoor, Pahalgam attack, India, Pakistan, airstrikes, Kashmir, Indo-Pak tension, India vs Pakistan, Terror attack, Line of Control, LoC, Indian Air Force, IAF, Indian Army, Border conflict, Jai Hind, Hindustan Zindabad, Bharat Mata ki Jai, Indian Military, Surgical Strike, Balakot, PoK, Pakistan Occupied Kashmir">
+    <meta name="description" content="Operation Sindoor: India's precision airstrikes on terror hubs after Pahalgam attack. India strikes Pakistan terror camps in retaliation for Kashmir terror attack. Updates on India-Pakistan tension and border conflict. #OperationSindoor #PahalgamAttack #JaiHind">
+    <meta name="keywords" content="Operation Sindoor, Pahalgam attack, India, Pakistan, airstrikes, Kashmir, Indo-Pak tension, India vs Pakistan, Terror attack, Line of Control, LoC, Indian Air Force, IAF, Indian Army, Border conflict, Jai Hind, Hindustan Zindabad, Bharat Mata ki Jai, Indian Military, Surgical Strike, Balakot, PoK, Pakistan Occupied Kashmir, Mirage 2000, SPICE 2000, IAF Vajra, Sukhoi Su-30MKI, SU30, TRF attack, Kashmir Resistance Front">
     <meta name="author" content="Indian Patriots">
     <meta property="og:title" content="Operation Sindoor: India's Precision Airstrikes on Pakistan Terror Hubs After Pahalgam Attack">
-    <meta property="og:description" content="Latest updates on Operation Sindoor: India's precision airstrikes across Pakistan and PoK in retaliation for Pahalgam terror attack. Hindustan Zindabad!">
+    <meta property="og:description" content="Latest updates on Operation Sindoor: India's precision airstrikes across Pakistan and PoK in retaliation for Pahalgam terror attack. Hindustan Zindabad! #IndiaStrikes #OperationSindoor">
     <meta property="og:image" content="flag.jpg">
     <meta property="og:url" content="https://operation-sindoor.in/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Operation Sindoor: India's Strategic Response to Terror - Hindustan Zindabad">
-    <meta name="twitter:description" content="Latest updates on India's precision airstrikes against Pakistan terrorism. Surgical strike after Pahalgam attack. Jai Hind! भारत माता की जय!">
+    <meta name="twitter:description" content="Latest updates on India's precision airstrikes against Pakistan terrorism. Surgical strike after Pahalgam attack. Jai Hind! भारत माता की जय! #OperationSindoor #IndiaStrikes">
     <meta name="twitter:image" content="flag.jpg">
     <meta name="google-adsense-account" content="ca-pub-2122039846521532">
-    <title>Operation Sindoor: India's Precision Airstrikes Against Pakistan Terror Hubs | Hindustan Zindabad | Jai Hind | भारत माता की जय</title>
+    <title>Operation Sindoor: India's Precision Airstrikes Against Pakistan Terror Hubs | Hindustan Zindabad | Jai Hind | भारत माता की जय | #IndiaStrikes</title>
     <link rel="canonical" href="https://operation-sindoor.in/">
     
     <!-- Google Analytics -->
@@ -426,6 +426,32 @@
             background-color: #25d366;
         }
         
+        .related-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 8px 12px;
+            background: linear-gradient(to right, #FF9933, #FFFFFF, #138808);
+            border-radius: 20px;
+            color: #000080;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .tag:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        }
+        
         /* Fireworks Animation */
         @keyframes firework-animation {
             0% {
@@ -492,6 +518,115 @@
                 min-height: 300px;
             }
         }
+        
+        /* Timeline Styles */
+        .timeline-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-heading {
+            color: #000080;
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #FF9933;
+            padding-bottom: 10px;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: linear-gradient(to bottom, #FF9933, #FFFFFF, #138808);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 5px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background: linear-gradient(135deg, #FF9933, #138808);
+            border: 4px solid #FFFFFF;
+            top: 22px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: #000080;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content {
+            padding: 15px;
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-content h4 {
+            margin-top: 0;
+            color: #FF9933;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 21px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -539,15 +674,26 @@
             <div class="news-section">
                 <h2>Operation Sindoor: India's Strategic Response to Pahalgam Terror Attack</h2>
                 <p>India carried out a series of precision airstrikes on nine identified terror hubs across Pakistan and Pakistan-Occupied Kashmir (PoK) in retaliation for the April 22 Pahalgam attack, which killed 25 Indian civilians and one Nepali citizen. This marked the first time since the 2019 Balakot strikes that Indian warplanes crossed the Line of Control (LoC).</p>
-                <p>The strikes, conducted under the codename Operation Sindoor, were aimed at disrupting terrorist infrastructure used to plan and direct cross-border operations. Indian Air Force Mirage 2000 jets, supported by Sukhoi Su-30MKI fighters, precisely targeted terrorist camps with SPICE 2000 precision-guided munitions.</p>
-                <p>Prime Minister Modi had earlier vowed to pursue the attackers "to the ends of the earth" following the Pahalgam massacre. The Indian military was given "complete operational freedom" to respond to the attack, resulting in today's decisive action.</p>
+                <p>The strikes, conducted under the codename Operation Sindoor, were carried out by elite IAF Mirage 2000 fighter jets armed with Israeli-made SPICE 2000 precision-guided munitions. The operation was supported by Sukhoi Su-30MKI aircraft that provided air cover during the mission. These fighter jets, known as "Vajra" (thunderbolt), have a proven track record from the 1999 Kargil War and the 2019 Balakot airstrikes.</p>
+                <p>Prime Minister Modi had earlier vowed to pursue the attackers "to the ends of the earth" following the Pahalgam massacre. The Indian military was given "complete operational freedom" to respond to the attack, resulting in today's decisive action against terrorist infrastructure used to plan and direct cross-border operations.</p>
                 <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2127370" target="_blank">Read Official Press Release</a>
                 
-                <!-- Social sharing buttons -->
+                <!-- Social sharing buttons and tags -->
                 <div class="social-share">
                     <a href="javascript:void(0);" onclick="shareOnFacebook()" class="social-btn facebook">Share on Facebook</a>
                     <a href="javascript:void(0);" onclick="shareOnTwitter()" class="social-btn twitter">Share on Twitter</a>
                     <a href="javascript:void(0);" onclick="shareOnWhatsApp()" class="social-btn whatsapp">Share on WhatsApp</a>
+                </div>
+                
+                <div class="related-tags">
+                    <span class="tag">#OperationSindoor</span>
+                    <span class="tag">#IndiaStrikes</span>
+                    <span class="tag">#PahalgamAttack</span>
+                    <span class="tag">#JaiHind</span>
+                    <span class="tag">#indianairforce</span>
+                    <span class="tag">#Mirage2000</span>
+                    <span class="tag">#bharat</span>
+                    <span class="tag">#IndiaVsPak</span>
                 </div>
             </div>
             
