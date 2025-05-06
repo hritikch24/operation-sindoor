@@ -426,30 +426,17 @@
             background-color: #25d366;
         }
         
-        .related-tags {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin: 20px 0;
-        }
-        
-        .tag {
-            display: inline-block;
-            padding: 8px 12px;
-            background: linear-gradient(to right, #FF9933, #FFFFFF, #138808);
-            border-radius: 20px;
-            color: #000080;
-            font-weight: bold;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        
-        .tag:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        /* Hidden tags for SEO */
+        .hidden-tags {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
         
         /* Fireworks Animation */
@@ -678,22 +665,23 @@
                 <p>Prime Minister Modi had earlier vowed to pursue the attackers "to the ends of the earth" following the Pahalgam massacre. The Indian military was given "complete operational freedom" to respond to the attack, resulting in today's decisive action against terrorist infrastructure used to plan and direct cross-border operations.</p>
                 <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2127370" target="_blank">Read Official Press Release</a>
                 
-                <!-- Social sharing buttons and tags -->
+                <!-- Social sharing buttons -->
                 <div class="social-share">
                     <a href="javascript:void(0);" onclick="shareOnFacebook()" class="social-btn facebook">Share on Facebook</a>
                     <a href="javascript:void(0);" onclick="shareOnTwitter()" class="social-btn twitter">Share on Twitter</a>
                     <a href="javascript:void(0);" onclick="shareOnWhatsApp()" class="social-btn whatsapp">Share on WhatsApp</a>
                 </div>
                 
-                <div class="related-tags">
-                    <span class="tag">#OperationSindoor</span>
-                    <span class="tag">#IndiaStrikes</span>
-                    <span class="tag">#PahalgamAttack</span>
-                    <span class="tag">#JaiHind</span>
-                    <span class="tag">#indianairforce</span>
-                    <span class="tag">#Mirage2000</span>
-                    <span class="tag">#bharat</span>
-                    <span class="tag">#IndiaVsPak</span>
+                <!-- Hidden tags for SEO -->
+                <div class="hidden-tags">
+                    <span>#OperationSindoor</span>
+                    <span>#IndiaStrikes</span>
+                    <span>#PahalgamAttack</span>
+                    <span>#JaiHind</span>
+                    <span>#indianairforce</span>
+                    <span>#Mirage2000</span>
+                    <span>#bharat</span>
+                    <span>#IndiaVsPak</span>
                 </div>
             </div>
             
